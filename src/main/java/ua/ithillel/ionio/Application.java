@@ -36,17 +36,18 @@ public class Application {
                 BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
                 ) {
 
-            String socketMessage = readText(bufferedReader);
+//            String socketMessage = readText(bufferedReader);
 
-            writeText(bufferedWriter, new StringBuffer()
-                    .append("HTTP/1.1 200 OK\r\n")
-                    .append("Content-Type: text/html\r\n\r\n")
-                    .append("<html>\n" +
-                            "                    <body>\n" +
-                            "                    <h1>Hello World</h1>\n" +
-                            "                    </body>\n" +
-                            "                    </html>")
-                    .toString());
+            writeText(bufferedWriter, "HTTP/1.1 200 OK\r\n" +
+                    "Content-Type: text/html\r\n\r\n" +
+                    """
+                                                <html>
+                                                <body>
+                                                <h1>Hello World</h1>
+                                                </body>
+                                                </html>""");
+
+            System.out.println();
 
 
         } catch (IOException e) {
