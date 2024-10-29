@@ -7,3 +7,6 @@
   - Socket
 - Reader/Writer
 - Buffered Streams
+- Java NIO
+- FileChannels
+- Non-Blocking IO, (Server)SocketChannel, Selector
